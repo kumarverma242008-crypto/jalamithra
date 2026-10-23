@@ -1,0 +1,6 @@
+{
+  "name": "JalaMitra",
+  "description": "Smart Irrigation and Water-Level Monitoring System with ESP32-Based Monitoring and Future Pump Protection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
