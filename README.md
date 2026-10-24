@@ -160,6 +160,35 @@ npm run build
 
 ---
 
+## 6.1 Deploying to Vercel (Zero-Config SPA)
+
+JalaMitra is pre-configured for instant zero-config deployment on [Vercel](https://vercel.com):
+
+### Option A: Via GitHub (Recommended)
+1. Push this repository to GitHub (or GitLab / Bitbucket).
+2. Go to [vercel.com/new](https://vercel.com/new) and select your repository.
+3. Vercel automatically detects the **Vite** framework from `vercel.json`:
+   - **Framework Preset:** Vite
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+4. Click **Deploy**. Your application will be live on an HTTPS `.vercel.app` URL within seconds.
+
+### Option B: Via Vercel CLI
+```bash
+# Install Vercel CLI if not already installed
+npm i -g vercel
+
+# Deploy directly from your terminal
+vercel
+```
+
+### Why It Works Seamlessly on Vercel:
+- **`vercel.json` included:** Rewrites all routes (`/(.*) -> /index.html`) to ensure page refreshes and direct URLs never result in 404s.
+- **Client-Side Telemetry & Storage:** No external backend database or cloud functions required; full persistence works in browser storage.
+- **HTTPS & Demo Mode:** Works immediately with all simulated scenarios, payload validation sandbox, and CSV export.
+
+---
+
 ## 7. How to Use Demonstration Mode
 
 When physical hardware is not plugged in, JalaMitra boots into **Demo Mode** by default:
